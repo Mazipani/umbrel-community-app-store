@@ -1,36 +1,43 @@
 manifestVersion: 1
-id: mazipan-ownCloud
-name: ownCloud
-tagline: A safe home for all your data
-icon: https://images.icon-icons.com/2699/PNG/512/owncloud_logo_icon_170876.png
-category: Files
-version: "10.15.3"
+id: owncloud
+name: OwnCloud
+tagline: Your personal cloud storage and file sharing solution
+icon: https://raw.githubusercontent.com/owncloud/core/master/core/img/logo/logo.svg
+category: files
+version: "10.15.0"
 port: 8080
 description: >-
-  ownCloud is a secure, open-source file sync and sharing platform that gives you complete control over your data. 
-  
-  
-  Access your files, contacts, calendars and more from any device while keeping everything safely stored on your own server. 
-  Share files and folders with internal and external users with advanced permission controls, password protection, and expiration dates.
-  
-  
-  Features include real-time collaboration, web office integration with OnlyOffice and Collabora, mobile and desktop apps, 
-  and enterprise-grade security with encryption and compliance support.
+  OwnCloud is a self-hosted file sync and share server that puts the control and security of your own data back into your hands. It provides universal access to your files via the web, your computer or your mobile devices wherever you are.
 
-developer: ownCloud GmbH
+  Key features include:
+  
+  📁 File Management: Store, sync, and share files across all your devices
+  
+  🔒 Security: Keep your data private with end-to-end encryption
+  
+  👥 Collaboration: Share files and folders with others securely
+  
+  📱 Mobile Apps: Access your files from iOS and Android devices
+  
+  🔄 Synchronization: Real-time sync across all your devices
+  
+  🎨 Customization: Extend functionality with apps and themes
+  
+  🌐 Web Interface: Access your files from any web browser
+  
+  💾 Backup: Automatic versioning and file recovery options
+
+developer: OwnCloud GmbH
 website: https://owncloud.com
-submitter: Mazipan
-submission: https://github.com/Mazipani/umbrel-community-app-store
+submitter: community
+submission: https://github.com/getumbrel/umbrel-community-app-store
 repo: https://github.com/owncloud/core
 support: https://github.com/owncloud/core/issues
 gallery:
-  - https://owncloud.com/wp-content/uploads/2020/08/Home-UI.png
-  - https://owncloud.com/wp-content/uploads/2022/11/example.png
-  - https://owncloud.com/wp-content/uploads/2022/11/5107998E-B29E-4485-AE1C-43EF601E1A67.png
+  - https://owncloud.com/wp-content/uploads/2021/05/owncloud-web-files.png
+  - https://owncloud.com/wp-content/uploads/2021/05/owncloud-web-sharing.png
 releaseNotes: >-
-  ownCloud 10.15.3 includes security improvements, bug fixes, and enhanced stability.
-  This version maintains compatibility with existing installations while providing
-  the latest features and security updates from the ownCloud team.
+  This version includes security updates, performance improvements, and bug fixes for enhanced stability and user experience.
 dependencies: []
 path: ""
 defaultUsername: "admin"
