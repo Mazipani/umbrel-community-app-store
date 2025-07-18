@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: owncloud
+id: mazipan-owncloud
 name: OwnCloud
 tagline: Your personal cloud storage and file sharing solution
 icon: https://raw.githubusercontent.com/owncloud/core/master/core/img/logo/logo.svg
