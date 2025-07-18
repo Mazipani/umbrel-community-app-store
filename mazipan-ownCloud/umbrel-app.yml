@@ -33,5 +33,5 @@ releaseNotes: >-
   the latest features and security updates from the ownCloud team.
 dependencies: []
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "admin"
+defaultPassword: "admin"
