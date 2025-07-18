@@ -10,22 +10,12 @@ services:
     image: owncloud/server:10.15.3
     container_name: owncloud_server_1
     restart: on-failure
-    depends_on:
-      - mariadb
-      - redis
     environment:
       - OWNCLOUD_DOMAIN=${APP_DOMAIN}:8080
       - OWNCLOUD_TRUSTED_DOMAINS=${APP_DOMAIN}
-      - OWNCLOUD_DB_TYPE=mysql
-      - OWNCLOUD_DB_NAME=owncloud
-      - OWNCLOUD_DB_USERNAME=owncloud
-      - OWNCLOUD_DB_PASSWORD=owncloud
-      - OWNCLOUD_DB_HOST=mariadb
+      - OWNCLOUD_DB_TYPE=sqlite
       - OWNCLOUD_ADMIN_USERNAME=admin
       - OWNCLOUD_ADMIN_PASSWORD=admin
-      - OWNCLOUD_MYSQL_UTF8MB4=true
-      - OWNCLOUD_REDIS_ENABLED=true
-      - OWNCLOUD_REDIS_HOST=redis
       - OWNCLOUD_LOG_LEVEL=2
     healthcheck:
       test: ["CMD", "/usr/bin/healthcheck"]
@@ -34,43 +24,4 @@ services:
       retries: 5
     volumes:
       - ${APP_DATA_DIR}/files:/mnt/data
-    networks:
-      - default
-
-  mariadb:
-    image: mariadb:10.11
-    container_name: owncloud_mariadb_1
-    restart: on-failure
-    environment:
-      - MYSQL_ROOT_PASSWORD=owncloud
-      - MYSQL_USER=owncloud
-      - MYSQL_PASSWORD=owncloud
-      - MYSQL_DATABASE=owncloud
-      - MYSQL_MAX_ALLOWED_PACKET=128M
-      - MYSQL_INNODB_LOG_FILE_SIZE=64M
-      - MARIADB_AUTO_UPGRADE=1
-      - MARIADB_DISABLE_UPGRADE_BACKUP=1
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-u", "root", "--password=owncloud"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    volumes:
-      - ${APP_DATA_DIR}/mysql:/var/lib/mysql
-    networks:
-      - default
-
-  redis:
-    image: redis:6
-    container_name: owncloud_redis_1
-    restart: on-failure
-    command: ["--databases", "1"]
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    volumes:
-      - ${APP_DATA_DIR}/redis:/data
-    networks:
-      - default
+      - ${APP_DATA_DIR}/config:/var/www/owncloud/config

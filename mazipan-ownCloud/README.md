@@ -23,7 +23,7 @@ Once the app is installed, you can access ownCloud at:
 
 ## Storage
 
-Your files are stored in the app's data directory and will persist across app restarts and updates.
+Your files are stored in the app's data directory and will persist across app restarts and updates. This installation uses SQLite for the database, which is perfect for personal use and automatically managed.
 
 ## Support
 
