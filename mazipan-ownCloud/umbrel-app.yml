@@ -2,7 +2,7 @@ manifestVersion: 1
 id: mazipan-ownCloud
 name: ownCloud
 tagline: A safe home for all your data
-icon: https://owncloud.com/wp-content/uploads/2023/12/owncloud-logo.png
+icon: https://images.icon-icons.com/2699/PNG/512/owncloud_logo_icon_170876.png
 category: Files
 version: "10.15.3"
 port: 8080
