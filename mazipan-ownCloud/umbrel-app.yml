@@ -1,0 +1,37 @@
+manifestVersion: 1
+id: mazipan-ownCloud
+name: ownCloud
+tagline: A safe home for all your data
+icon: https://owncloud.com/wp-content/uploads/2023/12/owncloud-logo.png
+category: Files
+version: "10.15.3"
+port: 8080
+description: >-
+  ownCloud is a secure, open-source file sync and sharing platform that gives you complete control over your data. 
+  
+  
+  Access your files, contacts, calendars and more from any device while keeping everything safely stored on your own server. 
+  Share files and folders with internal and external users with advanced permission controls, password protection, and expiration dates.
+  
+  
+  Features include real-time collaboration, web office integration with OnlyOffice and Collabora, mobile and desktop apps, 
+  and enterprise-grade security with encryption and compliance support.
+
+developer: ownCloud GmbH
+website: https://owncloud.com
+submitter: Mazipan
+submission: https://github.com/Mazipani/umbrel-community-app-store
+repo: https://github.com/owncloud/core
+support: https://github.com/owncloud/core/issues
+gallery:
+  - https://owncloud.com/wp-content/uploads/2020/08/Home-UI.png
+  - https://owncloud.com/wp-content/uploads/2022/11/example.png
+  - https://owncloud.com/wp-content/uploads/2022/11/5107998E-B29E-4485-AE1C-43EF601E1A67.png
+releaseNotes: >-
+  ownCloud 10.15.3 includes security improvements, bug fixes, and enhanced stability.
+  This version maintains compatibility with existing installations while providing
+  the latest features and security updates from the ownCloud team.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
